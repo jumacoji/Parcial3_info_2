@@ -9,8 +9,7 @@ class Bolas: public QObject, public QGraphicsPixmapItem
 Q_OBJECT
 
 public:
-    Bolas();
-    QRectF creabolas() const;
+    Bolas(QGraphicsItem *parent);
     int PosX();
     int PosY();
 

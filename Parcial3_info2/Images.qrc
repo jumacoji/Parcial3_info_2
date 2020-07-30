@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/bolita">
         <file>Bolini.png</file>
+        <file>Obstacle.png</file>
     </qresource>
 </RCC>

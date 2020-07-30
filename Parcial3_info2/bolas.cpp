@@ -1,6 +1,6 @@
 #include "bolas.h"
 
-Bolas::Bolas()
+Bolas::Bolas(QGraphicsItem *parent)
 {
     setPixmap(QPixmap(":/bolita/Bolini.png"));
     int x = PosX();

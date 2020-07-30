@@ -5,6 +5,7 @@
 #include <QTimer>
 #include <QGraphicsView>
 #include <QGraphicsScene>
+#include <QGraphicsPixmapItem>
 #include <QObject>
 #include <QPainter>
 #include "bolas.h"
@@ -23,7 +24,9 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     QGraphicsScene *scene;
-
+    Bolas *bola1;
+    Obstaculos *wall1;
+//    Obstaculos *obstaculo;
 
 
 private slots:
@@ -35,5 +38,7 @@ private:
     double X, Y, Vx, Vy, Yo ;               //Se crean las variables de posicion en X, en Y, la velocidad en X y la velocidad en Y y Y sub cero
     double T = 0.01, a = -9.8 ;        //Al igual se crea el periodo y la aceleracion
     QTimer *timer;
+    short ban = 0;
+
 };
 #endif // MAINWINDOW_H

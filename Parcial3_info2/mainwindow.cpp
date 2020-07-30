@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
     scene->setSceneRect(0,0,500,500);
 
 
+
 }
 
 MainWindow::~MainWindow()
