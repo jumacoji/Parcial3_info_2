@@ -6,6 +6,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    timer = new QTimer;
+    scene = new QGraphicsScene();
+    scene->setSceneRect(0,0,500,500);
+
 
 }
 
@@ -20,14 +24,14 @@ void MainWindow::on_Bolita_clicked()            //Boton el cual sirve para aniad
 
 }
 
-void MainWindow::movimiento(){
-    double Yd;
-    //    vy+=(a*T);
-//    x+=(vx*T);
-//    y+=vy*T-(a/2)*(T*T);
-//    yd=2*yo-y;
+void MainWindow::movimiento(){          //Funcion la cual sirve para darle movimiento a los objetos
+
+    double Ydeseado;
+    int relacion = 1;
+
     X += (Vx*T);
     Y += Vy*T-(a/2)*(T*T);
     Vy += (a*T);
+    Ydeseado = 2*Yo-Y;
 
 }

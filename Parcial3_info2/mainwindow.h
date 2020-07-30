@@ -5,7 +5,11 @@
 #include <QTimer>
 #include <QGraphicsView>
 #include <QGraphicsScene>
-#include <QGraphicsObject>
+#include <QObject>
+#include <QPainter>
+#include "bolas.h"
+#include "obstaculos.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,6 +22,9 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    QGraphicsScene *scene;
+
+
 
 private slots:
     void on_Bolita_clicked();
@@ -27,6 +34,6 @@ private:
     Ui::MainWindow *ui;
     double X, Y, Vx, Vy, Yo ;               //Se crean las variables de posicion en X, en Y, la velocidad en X y la velocidad en Y y Y sub cero
     double T = 0.01, a = -9.8 ;        //Al igual se crea el periodo y la aceleracion
-
+    QTimer *timer;
 };
 #endif // MAINWINDOW_H

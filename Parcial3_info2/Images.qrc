@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/bolita">
+        <file>Bolini.png</file>
+    </qresource>
+</RCC>
